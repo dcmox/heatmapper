@@ -1,0 +1,54 @@
+{
+  "name": "@dcmox/heatmapper",
+  "version": "1.0.0",
+  "private": false,
+  "description": "Heatmap generator for activities done in your browser.",
+  "main": "heatmapper.js",
+  "engines": {
+    "node": ">=4.0.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^24.0.24",
+    "@types/sinon": "^7.5.1",
+    "@typescript-eslint/eslint-plugin": "^2.14.0",
+    "@typescript-eslint/parser": "^2.14.0",
+    "chai": "^4.2.0",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.19.1",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.14.3",
+    "eslint-plugin-react-hooks": "^1.7.0",
+    "jest": "^24.9.0",
+    "sinon": "^7.5.0",
+    "ts-jest": "^24.2.0",
+    "tslint": "^5.20.1",
+    "typescript": "3.7.2"
+  },
+  "scripts": {
+    "lint": "eslint \"*.ts\"",
+    "test": "jest tests/*",
+    "build": "npm run build:main",
+    "build:main": "tsc heatmapper.ts",
+    "watch": "tsc -w  heatmapper.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dcmox/heatmapper.git"
+  },
+  "keywords": [
+    "engine",
+    "heatmapper",
+    "heat",
+    "map",
+    "mouse"
+  ],
+  "author": "Daniel Moxon (dancmox@comcast.net)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dcmox/heatmapper/issues"
+  },
+  "homepage": "https://github.com/dcmox/heatmapper#readme",
+  "dependencies": {}
+}

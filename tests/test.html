@@ -1,0 +1,132 @@
+<html>
+    <head>
+        <title>heatmapper-js engine demo</title>
+        <script src="../heatmapper.js" type="text/javascript"></script>
+        <script>generateCoordMap();</script>
+        <style>
+            body{
+                font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                margin: 0;
+            }
+            body a {
+                text-decoration: none;
+                color: #888;
+            }
+            body a:hover {
+                text-decoration: underline;
+            }
+            #logo {
+                font-size: 32px;
+            }
+            #logo span{
+                color: #aaa;
+            }
+            header nav ul, header nav li{
+                list-style: none;
+                display: inline;
+                margin: 0;
+                padding-left: 0;
+            }
+            header nav {
+                margin: 10px 0 20px 0;
+            }
+            header nav li{
+                color: #888;
+                border: 1px solid #eee;
+                border-radius: 3px;
+                padding: 4px 8px;
+            }
+            main {
+                padding: 10px;
+                width: 1000px;
+                margin: 0 auto;
+                background-color: #fafafa;
+                min-height: 100%;
+            }
+            article {
+                border-top: 1px dashed #ddd;
+                color: #444
+            }
+            article li{
+                margin-bottom: 20px;
+            }
+            button {
+                margin: 0 auto;
+                text-align: center;
+                padding: 6px 12px;
+                background-color: #eee;
+                border: 1px solid #ddd;
+            }
+            button:hover {
+                border-color: orange;
+                cursor: pointer;
+            }
+            span.playground{
+                font-family: 'Comic Sans MS';
+                font-size: 142px;
+                width: 100%;
+                text-align: center;
+                display: block;
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <header>
+                <div id="logo">
+                    heatmapper-js <span>demo</span>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="#">Nav</a></li>
+                        <li><a href="#">Links</a></li>
+                        <li><a href="#">Go</a></li>
+                        <li><a href="#">Here</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <article>
+                <p>
+                    Welcome to heatmapper-js! This is a demonstration on how you can use this script to generate heatmaps based on mouse movements.
+                </p>
+                <p>
+                    As you read this, your mouse movements are being tracked on screen. Feel free to move your mouse around and hit the "Display Heat Map"
+                    button to see this script in action. This script utilizes canvas and creates a PNG on the fly.
+                </p>
+                <p>
+                    Some supported functions include:
+                </p>
+                <ul>
+                    <li>
+                        <b>generateCoordMap</b> - Generates data for your heatmap based on your mouse movements. This function is ran on this demo's page load.
+                    </li>
+                    <li>
+                        <b>generateHeatMap</b> - Generates a heatmap based on a coordinate map. This can accept multiple maps and will automatically handle them 
+                        appropriately.
+                    </li>                   
+                    <li>
+                        <b>getScreenSize</b> - Gets the current viewport size within your browser.
+                    </li>
+                    <li>
+                        <b>getScreenSizes</b> - Gets all of the viewport sizes as you adjust the size of your browser window.
+                    </li>
+                    <li>
+                        <b>coordMapToJson</b> - Converts the stored coordinates to JSON based on a map ID.
+                    </li>
+                    <li>
+                        <b>loadCoordMap/loadCoordMaps</b> - Loads coordinates into the window context for generating a map.
+                    </li>
+                    <li>
+                        <b>getCoordMap</b> - Get a current instance of a coord map being stored or generated.
+                    </li>
+                </ul>
+            </article>
+            <span class="playground">3 &nbsp; 6 &nbsp; 0</span>
+            <p>
+                Experiment by using your mouse to trace over the numbers above and then click Display Heat Map!
+            </p>
+            <button id="displayHeatMap" onclick="generateHeatMap('result', {maxWidth: 1000});">Display Heat Map</button><br /><br />
+            <div id="result"></div>
+        </main>
+    </body>
+</html>
